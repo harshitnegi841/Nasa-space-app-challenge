@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #101011;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 26px;
+    background-color: #272727;
+}
+
+#nav .nav1 a{
+    text-decoration: none;
+    font-size: 28px;
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#nav .nav2 a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #9c9c9c;
+    margin: 0 40px ;
+}
+
+.centerHeading{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.centerHeading h1{
+    font-size:112px;
+    color: white;
+    text-align: center;
+}
+
+.centerHeading h2{
+    font-size:112px;
+    color: #9c9c9c;
+    text-align: center;
+}
+
+.rotating-wrapper {
+    display: flex;
+    overflow: hidden; /* Clips the divs so only one container is visible */
+    width: 100%; /* Makes the container width responsive */
+    padding: 20px;
+}
+
+.rotating-content {
+    display: flex;
+    width: max-content; /* Ensures the content is just wide enough */
+    animation: scroll 10s linear infinite; /* Scrolls endlessly */
+}
+
+.rotating-div {
+    display: flex;
+    gap: 120px;
+    color:white;
+    font-size: 30px;
+    font-weight: light;
+    white-space: nowrap; /* Prevents text wrapping */
+    margin-left: 120px;
+}
+
+.rotating-div h1{
+    font-weight: 600;
+}
+
+/* Keyframe for scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start at normal position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move content left until half */
+    }
+}
+
+
+.square{
+    width:800px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 55px;
+    margin-bottom: 60px;
+    position: relative;
+
+}
+
+.square button{
+    padding:25px 50px; 
+    color:white;
+    background-color: #101011;
+    position: absolute;
+    z-index: 10;
+    border: none;
+    font-size: 24px;
+    border-radius: 20px;
+    bottom:0; right:0;
+}
+
+.square button{
+    cursor: pointer;
+}
+
+.square button a{
+    text-decoration: none;
+    color:white;
+}
+
+.square button:active{
+    background-color: rgb(53, 51, 51);
+    color:white;
+}
+
+.section1{
+    width:100%;
+    margin-top:70px;
+    height:90vh;
+    display: flex;
+}
+
+.left1{
+    width:50%;
+    padding:60px;
+    padding-left: 80px;
+}
+
+.left1 h1{
+    color:white;
+    font-size:112px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.left1 p{
+    color:#9c9c9c;
+    font-size:26px;
+    letter-spacing: 1.75px;
+    
+}
+
+.right1{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right1 img{
+    width:550px;
+    border: 1px solid white;
+}

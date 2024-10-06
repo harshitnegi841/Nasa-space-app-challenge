@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Viewer</title>
+    <link rel="stylesheet" href="planet-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <div id="nav">
+        <div class="nav1"><a href="">Solar</a></div>
+        <div class="nav2">
+            <a href="index.html">Home</a>
+            <a href="planets.html">Planets</a>
+            <a href="neos.html">Neos</a>
+        </div>
+    </div>
+
+    
+    <div id="section1">
+        <div class="left">
+            <h2>Planet</h2>
+            <h1 id="planet-name">Mercury</h1>
+            <p id="planet-description">Mercury is the closest planet to the Sun and is the smallest planet in the solar system. Its surface is covered with craters, and it has a very thin atmosphere.</p>
+
+            <div class="page-button">
+                <button id="previous-planet">Previous Planet</button>
+                <button id="next-planet">Next Planet</button>
+            </div>
+           
+        </div>
+        <div class="right">
+            <model-viewer id="planet-model" src="Mercury.glb" alt="3D model of Mercury" auto-rotate camera-controls></model-viewer>
+        </div>
+    </div>
+
+    <script>
+        const planets = [
+            {
+                name: "Mercury",
+                description: "Mercury is the closest planet to the Sun and is the smallest planet in the solar system. Its surface is covered with craters, and it has a very thin atmosphere.",
+                model: "Mercury.glb"
+            },
+            {
+                name: "Venus",
+                description: "Venus is the second planet from the Sun and is often called Earth's twin because of their similar size. It has a thick atmosphere, mostly carbon dioxide, with clouds of sulfuric acid.",
+                model: "Venus.glb"
+            },
+            {
+                name: "Earth",
+                description: "Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.",
+                model: "Earth.glb"
+            },
+            {
+                name: "Mars",
+                description: "Mars is the fourth planet from the Sun and is known for its red color due to iron oxide on its surface. It has the largest volcano and canyon in the solar system.",
+                model: "Mars.glb"
+            },
+            {
+                name: "Jupiter",
+                description: "Jupiter is the largest planet in our solar system and is known for its Great Red Spot, a giant storm. It has a thick atmosphere and dozens of moons.",
+                model: "Jupiter.glb"
+            },
+            {
+                name: "Saturn",
+                description: "Saturn is famous for its stunning rings made of ice and rock particles. It is the second-largest planet in the solar system and has numerous moons.",
+                model: "Saturn.glb"
+            },
+            {
+                name: "Uranus",
+                description: "Uranus is an ice giant with a unique blue color due to methane in its atmosphere. It rotates on its side and has rings and several moons.",
+                model: "Uranus.glb"
+            },
+            {
+                name: "Neptune",
+                description: "Neptune is the farthest planet from the Sun and is known for its deep blue color. It has strong winds and a storm called the Great Dark Spot.",
+                model: "Neptune.glb"
+            }
+        ];
+    
+        let currentPlanetIndex = 0;
+    
+        // Function to update the planet display
+        function updatePlanet() {
+            document.getElementById("planet-name").innerText = planets[currentPlanetIndex].name;
+            document.getElementById("planet-description").innerText = planets[currentPlanetIndex].description;
+            document.getElementById("planet-model").setAttribute("src", planets[currentPlanetIndex].model);
+        }
+    
+        // Event listener for the "Next Planet" button
+        document.getElementById("next-planet").addEventListener("click", function() {
+            currentPlanetIndex = (currentPlanetIndex + 1) % planets.length;
+            updatePlanet();
+        });
+    
+        // Event listener for the "Previous Planet" button
+        document.getElementById("previous-planet").addEventListener("click", function() {
+            currentPlanetIndex = (currentPlanetIndex - 1 + planets.length) % planets.length;
+            updatePlanet();
+        });
+    </script>
+    
+
+</body>
+</html>

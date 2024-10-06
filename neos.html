@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #101011;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 26px;
+    background-color: #272727;
+}
+
+#nav .nav1 a{
+    text-decoration: none;
+    font-size: 28px;
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#nav .nav2 a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #9c9c9c;
+    margin: 0 40px ;
+}
+
+
+.centerHeading{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.centerHeading h1{
+    font-size:112px;
+    color: white;
+    text-align: center;
+}
+
+.centerHeading h2{
+    font-size:112px;
+    color: #9c9c9c;
+    text-align: center;
+}
+
+#section1{
+    display: flex;
+    width:100%;
+    padding: 40px 70px;
+}
+
+.left1{
+    width:50%;
+    height:100vh;
+}
+
+.left1 h1{
+    color:white;
+    font-size: 92px;
+    text-align: center;
+}
+
+.left1 img{
+    width:600px;
+    margin:80px 50px;
+    height: 500px;
+    object-fit: contain;
+    border: 1px solid white;
+}
+
+.right1{
+    width:50%;
+    height:100vh;
+}
+
+.right1 h1{
+    color:white;
+    font-size: 92px;
+    text-align: center;
+}
+
+.right1 img{
+    width:600px;
+    margin:80px 50px;
+    height: 500px;
+    object-fit: contain;
+    border: 1px solid white;
+}
+
+.model-button{
+    color:white;
+    background-color: #2d2a2a;
+    font-size: 30px;
+    margin:10px 100px;
+    padding:15px 30px;
+    border-radius: 15px;
+}
+
+.model-button a{
+    text-decoration: none;
+    color:white;
+}
+
+
+    </style>
+
+</head>
+<body>
+    
+    
+    <div id="nav">
+        <div class="nav1"><a href="">Solar</a></div>
+        <div class="nav2">
+            <a href="index.html">Home</a>
+            <a href="planets.html">Planets</a>
+            <a href="neos.html">Neos</a>
+        </div>
+    </div>
+
+    
+    <div class="centerHeading">
+        <h1>Near-Earth</h1>
+        <h2>Objects</h2>
+    </div>
+
+    <div id="section1">
+        <div class="left1">
+            <h1>Neos Prototype</h1>
+            <img src="demo-neo-prototype.png" alt="demo-neo">
+
+            <button class="model-button"><a href="asteroid_simulation.html">View Model</a></button>
+        </div>
+        <div class="right1">
+            <h1>Nasa Neos Model</h1>
+            <img src="nasa-neo-model.png" alt="nasa-neo">
+            
+            <button class="model-button"><a href="https://eyes.nasa.gov/apps/asteroids/#/home">View Model</a></button>
+        </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
